@@ -468,7 +468,8 @@ Polymer({
       postcode: "",
       address1: "",
       address1_number: "",
-      region: ""
+      region: "",
+      oo: ""
     }
 
     geocoder.geocode({'location': latlng}, (results,status) => {
@@ -499,6 +500,7 @@ Polymer({
           }
         });
 
+        objetoGeo.oo = results[0];
         this.set('geocoder',objetoGeo);
       }
     });
